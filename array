@@ -4,15 +4,17 @@ public class Program
 {
 	public static void Main()
     {
-   String test="int [][] a = new int [2][7]";
-   var obj=test.Split('[',']',',');
-   int currentVal;	
-	 for(int i=0;i<obj.Length;i++){
-		bool isNumeric=int.TryParse(obj[i], out currentVal);
-		if(isNumeric){
- 			//Console.WriteLine(i+": "+obj[i]);
-			Console.WriteLine(currentVal);
-		}
-	 }
-     }
+   		//String test="int [][] a = new int [2][7]";
+		Console.WriteLine("initialize  an array ");
+		String test=Console.ReadLine();
+ 		var obj=test.Split('[',']',',');
+   		int currentVal;	
+		for(int i=0;i<obj.Length;i++){
+			bool isNumeric=int.TryParse(obj[i], out currentVal);
+			if(isNumeric){
+ 				//Console.WriteLine(i+": "+obj[i]);
+				Console.WriteLine(currentVal);
+			}
+		 }
+    }
 }
