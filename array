@@ -1,18 +1,37 @@
 using System;
-					
-public class Program
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sscTechnologies
 {
-	public static void Main()
+    class Program
     {
-   String test="int [][] a = new int [46544][7]";
-   var obj=test.Split('[',']',',');
-   int currentVal;	
-	 for(int i=0;i<obj.Length;i++){
-		bool isNumeric=int.TryParse(obj[i], out currentVal);
-		if(isNumeric){
- 			//Console.WriteLine(i+": "+obj[i]);
-			Console.WriteLine(i+": "+ currentVal);
-		}
-	 }
-	}
-  }
+        static void Main(string[] args)
+        {
+            //String test="int [][] a = new int [2][7]";
+            Console.WriteLine("example : int[] array = new int[10]; / int [,] twoD_Array = new int [3,4]; / int[][] jaggedArray = new int[3][];");
+            Console.WriteLine("initialize an array ");
+            String test = Console.ReadLine();
+            var obj = test.Split('[', ']', ',');
+            int currentVal;
+            for (int i = 0; i < obj.Length; i++)
+            {
+                bool isNumeric = int.TryParse(obj[i], out currentVal);
+                if (isNumeric)
+                {
+                    //Console.WriteLine(i+": "+obj[i]);
+                    Console.WriteLine(currentVal);
+                }
+                
+                if(obj[i]==";")
+                {
+                    break;
+                }
+
+            }
+            Console.ReadLine();
+        }
+    }
+}
