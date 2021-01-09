@@ -1,0 +1,18 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+    {
+   String test="int [][] a = new int [46544][7]";
+   var obj=test.Split('[',']',',');
+   int currentVal;	
+	 for(int i=0;i<obj.Length;i++){
+		bool isNumeric=int.TryParse(obj[i], out currentVal);
+		if(isNumeric){
+ 			//Console.WriteLine(i+": "+obj[i]);
+			Console.WriteLine(i+": "+ currentVal);
+		}
+	 }
+	}
+  }
